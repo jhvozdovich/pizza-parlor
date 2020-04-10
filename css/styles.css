@@ -14,3 +14,22 @@ body {
 .order {
   display: none;
 }
+
+.price {
+  color: red;
+  font-size: 2em;
+}
+
+.select {
+  color: white;
+  background-color: blue;
+}
+
+.select:hover {
+  color: red;
+  background-color: yellow;
+}
+
+.toppings {
+  display:none;
+}

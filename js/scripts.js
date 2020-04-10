@@ -26,10 +26,12 @@ Pizza.prototype.sizePrice = function() {
 Pizza.prototype.totalToppingPrice = function() {
   toppingPrice = 0.00;
   this.toppings.forEach(function(topping) {
-    if (topping === "pepperonis" || topping === "mushrooms") {
-      toppingPrice += 1;
+    if (topping === "pepperonis" || topping === "mushrooms" || topping === "extra cheese" || topping === "nutritional yeast") {
+      toppingPrice += 2;
+    } else if (topping === "beef" || topping === "feta" || topping === "vegan cheese") {
+      toppingPrice += 3
     } else {
-      toppingPrice += 2; 
+      toppingPrice += 1; 
     }
   })
   return toppingPrice;
@@ -39,7 +41,7 @@ Pizza.prototype.totalAddOnPrice = function() {
   addOnPrice = 0.00;
   this.addOns.forEach(function(addOn) {
     if (addOn === "cheesy bread" || addOn === "garlic rolls") {
-      addOnPrice += 1;
+      addOnPrice += 5;
     } else {
       addOnPrice += 2; 
     }
@@ -76,17 +78,27 @@ function displayOrder(size, toppings, addOns, price) {
 
   if (addOns.length > 2) {
     var lastAddOn = addOns.pop();
-    $(".addOns").html(addOns.join(", ") + ", and " + lastAddOn);
+    $(".addOns").html("as well as " + addOns.join(", ") + ", and " + lastAddOn);
   } else if (addOns.length === 2) {
-    $(".addOns").html(addOns[0] + " and " + addOns[1]);
+    $(".addOns").html("as well as " + addOns[0] + " and " + addOns[1]);
   } else if (addOns.length === 1) {
-    $(".addOns").html(addOns);
+    $(".addOns").html("as well as " + addOns);
   }
 
   $(".order").show();
 }
 
 $(document).ready(function() {
+  $(".select.topping").click(function() {
+    if (this.id === "meat-options"){
+      $(".meat.toppings").slideToggle();
+    } else if (this.id === "vegetarian-options") {
+      $(".vegetarian.toppings").slideToggle();
+    } else if (this.id === "vegan-options") {
+      $(".vegan.toppings").slideToggle();
+    }
+  })
+
   $("form#pizza-input").submit(function(event) {
     event.preventDefault();
 

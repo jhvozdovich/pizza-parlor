@@ -24,13 +24,42 @@
           <br>
           <div class="form-group">
             <label for="toppings">Toppings</label>
-            <input type="checkbox" name="toppings" value="pepperonis">Pepperoni<br>
-            <input type="checkbox" name="toppings" value="extra cheese">Extra Cheese<br>
-            <input type="checkbox" name="toppings" value="mushrooms">Mushrooms<br>
+            <br>
+            <label class="select topping" id="meat-options">Meat</label>
+            <br>
+            <div class="meat toppings">
+              <input type="checkbox" name="toppings" value="pepperonis">Pepperoni<br>
+              <input type="checkbox" name="toppings" value="bacon">Bacon<br>
+              <input type="checkbox" name="toppings" value="ham">Ham<br>
+              <input type="checkbox" name="toppings" value="beef">Beef<br>
+              <input type="checkbox" name="toppings" value="chicken">Chicken<br>
+            </div>
+            <br>
+            
+            <label class="select topping" id="vegetarian-options">Vegetarian</label>
+            <br>
+            <div class="vegetarian toppings">
+              <input type="checkbox" name="toppings" value="extra cheese">Extra Cheese<br>
+              <input type="checkbox" name="toppings" value="mushrooms">Mushrooms<br>
+              <input type="checkbox" name="toppings" value="garlic">Garlic<br>
+              <input type="checkbox" name="toppings" value="banana peppers">Banana Peppers<br>
+              <input type="checkbox" name="toppings" value="pineapple">Pineapple<br>
+              <input type="checkbox" name="toppings" value="spinach">Spinach<br>
+              <input type="checkbox" name="toppings" value="feta">Feta<br>
+              <input type="checkbox" name="toppings" value="red peppers">Red Peppers<br>
+            </div>
+            <br>
+            <label class="select topping" id="vegan-options">Vegan</label>
+            <br>
+            <div class="vegan toppings">
+              <input type="checkbox" name="toppings" value="vegan cheese">Vegan Cheese<br>
+              <input type="checkbox" name="toppings" value="nutritional yeast">Nutritional Yeast<br>
+            </div>
           </div>
           <br>
           <div class="form-group">
             <label for="addOns">Add-Ons</label>
+            <br>
             <input type="checkbox" name="addOns" value="cheesy bread">Cheesy Bread<br>
             <input type="checkbox" name="addOns" value="garlic rolls">Garlic Rolls<br>
             <input type="checkbox" name="addOns" value="bread sticks">Bread Sticks<br>
@@ -43,8 +72,9 @@
       <div class="row">
         <div class="order">
           <p>The total price for a <span class="size"></span> pizza <span class="toppings"></span>
-          as well as <span class="addOns"></span>
-          is <span class="price"></span></p>
+          <span class="addOns"></span>
+          is:</p>
+          <span class="price"></span>
         </div>
       </div>
   </body>
