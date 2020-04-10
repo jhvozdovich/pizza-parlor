@@ -43,6 +43,8 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **Accepts and returns user input of a topping** | User Input:”Pepperoni” | Output: “Pepperoni” |
 | **Accepts and returns user input of multiple toppings** | User Input:”Pepperoni, Extra Cheese, Mushrooms” | Output: “Pepperoni, Extra Cheese, and Mushrooms” |
 | **Displays cost associated with user selections** | User Input:”Medium + Pepperoni” | Output: “$10.00” |
+| **Provides option to restart order** | User Input:”Click-Restart” | Output: “Display-Welcome Page” |
+| **Provides option to alter order** | User Input:”Click-Adjust your order?” | Output: “Display-Order Page with Previous Selections to edit” |
 
 Stretch goals: order multiple different pizzas, add-ons like drinks/breadsticks/cheesy crust, have a different display after checkout with  the option to doodle on the box and display different images, accept address information for a delivery form.
 
