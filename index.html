@@ -7,86 +7,93 @@
     <script src="./js/scripts.js"></script>
   </head>
   <body>
-    <div class="container" id="welcome-screen">
-      <div class="jumbotron">
-        <h2>Welcome to</h2>
-        <h1>EXTREMELY GOOFY PIZZA</h1>
-        <button id="delivery" class="btn btn-lg">Delivery</button>
-        <p>or</p>
-        <button id="pickup" class="btn btn-lg">Pickup</button>
-      </div>
-    </div>
-    <div class="container" id="order-screen">
-      <div class="row">
+    <div class="container">
+      <div id="welcome-screen">
         <div class="jumbotron">
-          <h1>Extremely Goofy Pizza</h1>
-        </div>
-        <button class="refresh btn btn-lg">Restart Your Order</button>
-        <br>
-        <form id="pizza-input">
-          <div class="form-group">
-            <label for="size">Select size:</label>
-            <select id="size" name="size">
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-            </select>  
-          </div>  
-          <br>
-          <div class="form-group">
-            <label for="toppings">Toppings</label>
-            <br>
-            <label class="select topping" id="meat-options">Meat</label>
-            <br>
-            <div class="meat options">
-              <input type="checkbox" name="toppings" value="pepperonis">Pepperoni<br>
-              <input type="checkbox" name="toppings" value="bacon">Bacon<br>
-              <input type="checkbox" name="toppings" value="ham">Ham<br>
-              <input type="checkbox" name="toppings" value="beef">Beef<br>
-              <input type="checkbox" name="toppings" value="chicken">Chicken<br>
-            </div>
-            <br>
-            
-            <label class="select topping" id="vegetarian-options">Vegetarian</label>
-            <br>
-            <div class="vegetarian options">
-              <input type="checkbox" name="toppings" value="extra cheese">Extra Cheese<br>
-              <input type="checkbox" name="toppings" value="mushrooms">Mushrooms<br>
-              <input type="checkbox" name="toppings" value="garlic">Garlic<br>
-              <input type="checkbox" name="toppings" value="banana peppers">Banana Peppers<br>
-              <input type="checkbox" name="toppings" value="pineapple">Pineapple<br>
-              <input type="checkbox" name="toppings" value="spinach">Spinach<br>
-              <input type="checkbox" name="toppings" value="feta">Feta<br>
-              <input type="checkbox" name="toppings" value="red peppers">Red Peppers<br>
-            </div>
-            <br>
-            <label class="select topping" id="vegan-options">Vegan</label>
-            <br>
-            <div class="vegan options">
-              <input type="checkbox" name="toppings" value="vegan cheese">Vegan Cheese<br>
-              <input type="checkbox" name="toppings" value="nutritional yeast">Nutritional Yeast<br>
-            </div>
-          </div>
-          <br>
-          <div class="form-group">
-            <label for="addOns">Add-Ons</label>
-            <br>
-            <input type="checkbox" name="addOns" value="cheesy bread">Cheesy Bread<br>
-            <input type="checkbox" name="addOns" value="garlic rolls">Garlic Rolls<br>
-            <input type="checkbox" name="addOns" value="bread sticks">Bread Sticks<br>
-            <input type="checkbox" name="addOns" value="soda">Soda<br>
-          </div>
-          <br>
-          <button type="submit">Place Order</button>
-        </form>
-      </div>
-      <div class="row">
-        <div class="order">
-          <p>The total price for a <span class="size"></span> pizza <span class="toppings"></span>
-          <span class="addOns"></span>
-          is:</p>
-          <span class="price"></span>
+          <h2>Welcome to</h2>
+          <h1>EXTREMELY GOOFY PIZZA</h1>
+          <button id="delivery" class="btn btn-lg">Delivery</button>
+          <p>or</p>
+          <button id="pickup" class="btn btn-lg">Pickup</button>
         </div>
       </div>
+      <div id="order-screen">
+        <div class="row">
+          <div class="jumbotron">
+            <h1>Extremely Goofy Pizza</h1>
+          </div>
+          <button class="refresh btn btn-lg">Restart Your Order</button>
+          <br>
+          <form id="pizza-input">
+            <div class="form-group">
+              <label for="size">Select size:</label>
+              <select id="size" name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>  
+            </div>  
+            <br>
+            <div class="form-group">
+              <label for="toppings">Toppings</label>
+              <br>
+              <label class="select topping" id="meat-options">Meat</label>
+              <br>
+              <div class="meat options">
+                <input type="checkbox" name="toppings" value="pepperonis">Pepperoni<br>
+                <input type="checkbox" name="toppings" value="bacon">Bacon<br>
+                <input type="checkbox" name="toppings" value="ham">Ham<br>
+                <input type="checkbox" name="toppings" value="beef">Beef<br>
+                <input type="checkbox" name="toppings" value="chicken">Chicken<br>
+              </div>
+              <br>
+              
+              <label class="select topping" id="vegetarian-options">Vegetarian</label>
+              <br>
+              <div class="vegetarian options">
+                <input type="checkbox" name="toppings" value="extra cheese">Extra Cheese<br>
+                <input type="checkbox" name="toppings" value="mushrooms">Mushrooms<br>
+                <input type="checkbox" name="toppings" value="garlic">Garlic<br>
+                <input type="checkbox" name="toppings" value="banana peppers">Banana Peppers<br>
+                <input type="checkbox" name="toppings" value="pineapple">Pineapple<br>
+                <input type="checkbox" name="toppings" value="spinach">Spinach<br>
+                <input type="checkbox" name="toppings" value="feta">Feta<br>
+                <input type="checkbox" name="toppings" value="red peppers">Red Peppers<br>
+              </div>
+              <br>
+              <label class="select topping" id="vegan-options">Vegan</label>
+              <br>
+              <div class="vegan options">
+                <input type="checkbox" name="toppings" value="vegan cheese">Vegan Cheese<br>
+                <input type="checkbox" name="toppings" value="nutritional yeast">Nutritional Yeast<br>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="addOns">Add-Ons</label>
+              <br>
+              <input type="checkbox" name="addOns" value="cheesy bread">Cheesy Bread<br>
+              <input type="checkbox" name="addOns" value="garlic rolls">Garlic Rolls<br>
+              <input type="checkbox" name="addOns" value="bread sticks">Bread Sticks<br>
+              <input type="checkbox" name="addOns" value="soda">Soda<br>
+            </div>
+            <br>
+            <button type="submit">Place Order</button>
+          </form>
+        </div>
+      </div>
+      <div id="final-screen">
+        <div class="row">
+          <div class="order">
+            <p>The total price for a <span class="size"></span> pizza <span class="toppings"></span>
+            <span class="addOns"></span>
+            is:</p>
+            <span class="price"></span>
+          </div>
+          <button id="fix-order" class="btn btn-lg">Alter your order?</button>
+          <button class="refresh btn btn-lg">Place Another Order?</button>
+        </div>
+      </div>
+    </div>  
   </body>
 </html>

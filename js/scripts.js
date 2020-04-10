@@ -84,8 +84,8 @@ function displayOrder(size, toppings, addOns, price) {
   } else if (addOns.length === 1) {
     $(".addOns").html("as well as " + addOns);
   }
-
-  $(".order").show();
+  $("#order-screen").hide();
+  $("#final-screen").show();
 }
 
 $(document).ready(function() {
@@ -97,6 +97,11 @@ $(document).ready(function() {
   $("#pickup").click(function(){
     $("#order-screen").show();
     $("#welcome-screen").hide();
+  })
+
+  $("#fix-order").click(function() {
+    $("#order-screen").show();
+    $("#final-screen").hide();
   })
 
   $(".refresh").click(function() {

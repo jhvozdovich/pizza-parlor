@@ -11,11 +11,7 @@ body {
   overflow: auto;
 }
 
-#order-screen {
-  display: none;
-}
-
-.order {
+#order-screen, #final-screen {
   display: none;
 }
 
