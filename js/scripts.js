@@ -20,16 +20,12 @@ Pizza.prototype.sizePrice = function() {
 
 Pizza.prototype.totalToppingPrice = function() {
   toppingPrice = 0.00;
-  console.log(this.toppings);
   this.toppings.forEach(function(topping) {
-    if (topping === "pepperoni" || topping === "mushrooms") {
+    if (topping === "pepperonis" || topping === "mushrooms") {
       toppingPrice += 1;
-      console.log("adding topping prices " + toppingPrice);
     } else {
       toppingPrice += 2; 
-      console.log("adding topping prices " + toppingPrice);
     }
-    console.log("total topping price " + toppingPrice + " " + typeof(toppingPrice));
   })
   return toppingPrice;
 }
@@ -37,38 +33,43 @@ Pizza.prototype.totalToppingPrice = function() {
 Pizza.prototype.totalPrice = function() {
   var totalPrice = 0;
   var totalToppings = this.totalToppingPrice();
-  console.log(totalToppings);
+
   var sizePrice = this.sizePrice();
-  console.log("size price " + sizePrice);
   totalPrice += sizePrice;
   totalPrice += totalToppings;
   return totalPrice;
-  // console.log("add size price " + totalPrice);
-  // console.log("call method " + totalToppings)
-  // console.log("data type of topping price" + typeof(totalToppings))
-  // totalPrice += totalToppings;
-  // console.log("add total topping price " + totalPrice);
-  // return totalPrice;
 }
 
 
 // User Interface Logic -------------------------------------
+function displayOrder(size, toppings, price) {
+  $(".size").html(size);
+  $(".price").html("$" + price.toFixed(2));
+  if (toppings.length > 2) {
+    var lastTopping = toppings.pop();
+    $(".toppings").html("with " + toppings.join(", ") + ", and " + lastTopping);
+  } else if (toppings.length === 2) {
+    $(".toppings").html("with " + toppings[0] + " and " + toppings[1]);
+  } else if (toppings.length === 1) {
+    $(".toppings").html("with " + toppings);
+  }
+  $(".order").show();
+}
+
 $(document).ready(function() {
   $("form#pizza-input").submit(function(event) {
     event.preventDefault();
 
-    
     var size = $("#size").val();
     var pizza = new Pizza(size);
 
     $("input:checkbox[name=toppings]:checked").each(function() {
       var topping = $(this).val();
       pizza.addToppings(topping);
-      console.log(pizza.toppings);
     })
 
     var pizzaPrice = pizza.totalPrice();
-    console.log(pizzaPrice);
 
+    displayOrder(size, pizza.toppings, pizzaPrice);
   })
 })

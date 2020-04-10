@@ -6,6 +6,11 @@ body {
 .container {
   background-color: whitesmoke;
 }
+
 .jumbotron {
   overflow: auto;
+}
+
+.order {
+  display: none;
 }
