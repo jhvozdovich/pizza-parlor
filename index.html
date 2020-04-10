@@ -7,11 +7,22 @@
     <script src="./js/scripts.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="welcome-screen">
+      <div class="jumbotron">
+        <h2>Welcome to</h2>
+        <h1>EXTREMELY GOOFY PIZZA</h1>
+        <button id="delivery" class="btn btn-lg">Delivery</button>
+        <p>or</p>
+        <button id="pickup" class="btn btn-lg">Pickup</button>
+      </div>
+    </div>
+    <div class="container" id="order-screen">
       <div class="row">
         <div class="jumbotron">
           <h1>Extremely Goofy Pizza</h1>
         </div>
+        <button class="refresh btn btn-lg">Restart Your Order</button>
+        <br>
         <form id="pizza-input">
           <div class="form-group">
             <label for="size">Select size:</label>

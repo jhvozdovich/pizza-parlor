@@ -89,6 +89,20 @@ function displayOrder(size, toppings, addOns, price) {
 }
 
 $(document).ready(function() {
+  $("#delivery").click(function(){
+    $("#order-screen").show();
+    $("#welcome-screen").hide();
+  })
+
+  $("#pickup").click(function(){
+    $("#order-screen").show();
+    $("#welcome-screen").hide();
+  })
+
+  $(".refresh").click(function() {
+    window.location.reload();
+  })
+
   $(".select.topping").click(function() {
     if (this.id === "meat-options"){
       $(".meat.options").slideToggle();

@@ -11,6 +11,10 @@ body {
   overflow: auto;
 }
 
+#order-screen {
+  display: none;
+}
+
 .order {
   display: none;
 }
