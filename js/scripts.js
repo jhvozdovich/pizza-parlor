@@ -106,6 +106,7 @@ $(document).ready(function() {
   $("#pickup").click(function(){
     $("#order-screen").show();
     $("#welcome-screen").hide();
+    $(".retrieval-message").text("Your pizza will be ready for pickup in 30 minutes!");
   })
 
   $("#fix-order").click(function() {
@@ -131,7 +132,8 @@ $(document).ready(function() {
 
   $("form#address-input").submit(function(event) {
     event.preventDefault();
-
+    var street = $("#street").val();
+    $(".retrieval-message").text("We'll see you at " + street + " in 45 minutes!")
     $("#delivery-screen").hide();
     $("#order-screen").show();
   })
@@ -154,6 +156,17 @@ $(document).ready(function() {
 
     var pizzaPrice = pizza.totalPrice();
 
-    displayOrder(size, pizza.toppings, pizza.addOns, pizzaPrice);
+    if (pizza.toppings.length === 1 && pizza.toppings.includes("pineapple")) {
+      $("#pizza-error").modal({
+        modal: true,
+        autoOpen: false,
+      })
+      $("#order-screen").fadeOut();
+      $("#close").click(function() {
+        $("#pizza-error").modal("hide");
+      })
+    } else {
+      displayOrder(size, pizza.toppings, pizza.addOns, pizzaPrice);
+    }
   })
 })

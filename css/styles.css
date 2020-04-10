@@ -4,6 +4,7 @@ body {
   background-color: rgb(253, 238, 173);
   border: 5px solid  rgb(65, 61, 57);
   text-align: center;
+  font-size: 1.5em;
   margin: 5%;
   overflow: auto;
 }
@@ -20,6 +21,10 @@ img {
 hr {
   height: 3px;
   background-color: rgb(65, 61, 57);
+}
+
+input:hover {
+  cursor: pointer;
 }
 
 .container-fluid {
@@ -63,9 +68,20 @@ hr {
 .btn-md:hover, .refresh:hover, .select:hover {
   font-size: 1em;
   color:  rgb(65, 61, 57);
-  border: 2px solid  rgb(65, 61, 57);
   background-color: rgb(253, 238, 173);
+  border: 2px solid  rgb(65, 61, 57);
   margin-bottom: 1%;
+}
+
+.select {
+  color:  rgb(65, 61, 57);
+  background-color: rgb(253, 238, 173);
+}
+
+.select:hover {
+  color: white;
+  background-color: #fa476e;
+  cursor: pointer;
 }
 
 label {
@@ -81,6 +97,10 @@ label {
 
 #order-screen, #delivery-screen, #final-screen {
   display: none;
+}
+
+#delivery-screen {
+  padding-bottom: 3%;
 }
 
 .order {
@@ -116,5 +136,11 @@ label {
   .last-gif {
     margin-top: 2%;
     margin-bottom: 2%;
+  }
+  .btn-lg {
+    margin-bottom: 1%;
+  }
+  .btn-lg:hover {
+    margin-bottom: 1%;
   }
 }

@@ -4,6 +4,7 @@
     <link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="./css/styles.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/bootstrap.js"></script>
     <script src="./js/scripts.js"></script>
   </head>
   <body>
@@ -13,7 +14,7 @@
           <h2>Welcome to</h2>
           <h1>BOBBY'S PIZZA</h1>
         </div>  
-        <h3>For all of your EXTREMELY GOOFY za needs.</h3>
+        <h3>For all of your EXTREMELY GOOFY 'za needs.</h3>
         <img src="./img/bobbys-pizza-logo.jpeg" alt="Bobby's Pizza, home of the leaning tower of cheeza from a Goofy Movie">
         <hr>
         <p>
@@ -30,14 +31,31 @@
         <form id="address-input">
           <h2>Fill out your address below:</h2>
           <label for="street">Street Address</label>
-          <input id="street" class="form-control" type="text" required>
+          <br>
+          <input id="street" type="text" required>
+          <br>
           <label for="apt">Apartment Number</label>
-          <input id="apt" class="form-control" type="text">
+          <br>
+          <input id="apt" type="text">
+          <br>
           <label for="city">City</label>
-          <input id="city" class="form-control" type="text" required>
+          <br>
+          <input id="city" type="text" required>
+          <br>
           <label for="zipcode">Zip Code</label>
-          <input id="zipcode" class="form-control" type="text" required>
+          <br>
+          <input id="zipcode" type="text" required>
+          <br>
+          <label for="phone">Phone Number</label>
+          <br>
+          <input id="phone" type="text" required>
+          <hr>
+          <h3>Delivery instructions?</h3>
+          <input id="instructions" class="form-control" type="text">
+          <br>
           <button type="submit" class="btn btn-lg">Next</button>
+          <br>
+          <button class="refresh btn btn-lg">Back</button>
         </form>
       </div>
     </div>
@@ -122,15 +140,29 @@
             <button type="submit" class="btn btn-lg">Place Order</button>
           </form>
         </div>
+        <div class="modal fade" id="pizza-error" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <h3 class="modal-title">Error</h3>
+              <div class="modal-body">
+                <p>Sorry! You can't just have pineapple on pizza. That's our ony rule and you broke it.</p>
+                <button id="close">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>  
       </div>
       <div id="final-screen">
         <div class="row">
           <div class="order">
-            <p>The total price for a <span class="size"></span> pizza <span class="toppings"></span>
-            <span class="addOns"></span>
-            is:</p>
+            <p>
+              The total price for a <span class="size"></span> pizza <span class="toppings"></span>
+              <span class="addOns"></span> is:
+            </p>
             <span class="price"></span>
           </div>
+          <span class="retrieval-message"></span>
+          <br>
           <button id="fix-order" class="btn btn-md">Adjust your order?</button>
           <button class="refresh btn btn-md">Place Another Order?</button>
           <br>
