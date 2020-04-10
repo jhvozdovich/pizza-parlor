@@ -13,15 +13,32 @@
           <h2>Welcome to</h2>
           <h1>BOBBY'S PIZZA</h1>
         </div>  
-          <h3>For all of your EXTREMELY GOOFY za needs.</h3>
-          <img src="./img/bobbys-pizza-logo.jpeg" alt="Bobby's Pizza, home of the leaning tower of cheeza from a Goofy Movie">
-          <hr>
-          <p>
-            <button id="delivery" class="btn btn-lg">Delivery</button>
-            <button id="pickup" class="btn btn-lg">Pickup</button>
-          </p>
-          
+        <h3>For all of your EXTREMELY GOOFY za needs.</h3>
+        <img src="./img/bobbys-pizza-logo.jpeg" alt="Bobby's Pizza, home of the leaning tower of cheeza from a Goofy Movie">
+        <hr>
+        <p>
+          <button id="delivery" class="btn btn-lg">Delivery</button>
+          <button id="pickup" class="btn btn-lg">Pickup</button>
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div id="delivery-screen">
+        <div class="jumbotron">
+          <h1>Bobby's Pizza - Delivery</h1>
         </div>
+        <form id="address-input">
+          <h2>Fill out your address below:</h2>
+          <label for="street">Street Address</label>
+          <input id="street" class="form-control" type="text" required>
+          <label for="apt">Apartment Number</label>
+          <input id="apt" class="form-control" type="text">
+          <label for="city">City</label>
+          <input id="city" class="form-control" type="text" required>
+          <label for="zipcode">Zip Code</label>
+          <input id="zipcode" class="form-control" type="text" required>
+          <button type="submit" class="btn btn-lg">Next</button>
+        </form>
       </div>
     </div>
     <div class="container-fluid"> 

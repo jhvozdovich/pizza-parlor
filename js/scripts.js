@@ -99,7 +99,7 @@ function displayOrder(size, toppings, addOns, price) {
 
 $(document).ready(function() {
   $("#delivery").click(function(){
-    $("#order-screen").show();
+    $("#delivery-screen").show();
     $("#welcome-screen").hide();
   })
 
@@ -127,6 +127,13 @@ $(document).ready(function() {
     } else if (this.id === "goofy-options") {
       $(".goofy.options").slideToggle();
     }
+  })
+
+  $("form#address-input").submit(function(event) {
+    event.preventDefault();
+
+    $("#delivery-screen").hide();
+    $("#order-screen").show();
   })
 
   $("form#pizza-input").submit(function(event) {
