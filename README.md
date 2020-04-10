@@ -26,7 +26,7 @@ No bugs have been identified at the time of this update.
 
 ### Support and Contact Information
 
-Please contact me with any suggestions or questions at jhvozdovich@gmail.com. Thank you for your input!
+Please contact me with any suggestions or questions at jhvozdovich@gmail.com. Thank you for your input!  
 _Have a bug or an issue with this application? [Open a new issue](https://github.com/jhvozdovich/pizza-parlor/issues) here on GitHub._
 
 ### Technologies Used
