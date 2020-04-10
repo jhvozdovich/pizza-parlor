@@ -46,7 +46,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **Provides option to restart order** | User Input:”Click-Restart” | Output: “Display-Welcome Page” |
 | **Provides option to alter order** | User Input:”Click-Adjust your order?” | Output: “Display-Order Page with previous selections to edit” |
 | **Delivery option on welcome page** | User Input:”Click-Delivery” | Output: “Please input your address information” |
-| **Pickup option* on welcome page* | User Input:”Click-Pickup” | Output: “Please create your pizza” |
+| **Pickup option on welcome page** | User Input:”Click-Pickup” | Output: “Please create your pizza” |
 | **Different final display based on previous selections** | User Input:”Click-Pickup, Select-Leaning Tower of Cheeza” | Output: “'Your order will be ready for pickup in 30 minutes!' + Cheeza Gif” |
 | **Displays error if only pineapple is selected** | User Input: "Select-Pineapple” | Output: “Error-That's gross.” |
 

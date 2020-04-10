@@ -1,7 +1,7 @@
 // Business Logic -------------------------------------------
 function Pizza(size) {
   this.size = size,
-  this.toppings = []
+  this.toppings = [],
   this.addOns = []
 }
 
@@ -29,7 +29,7 @@ Pizza.prototype.totalToppingPrice = function() {
     if (topping === "pepperonis" || topping === "mushrooms" || topping === "extra cheese" || topping === "nutritional yeast" || topping === "macaroni and cheese") {
       toppingPrice += 2;
     } else if (topping === "beef" || topping === "feta" || topping === "vegan cheese" || topping === "cheddar whiz") {
-      toppingPrice += 3
+      toppingPrice += 3;
     } else {
       toppingPrice += 1.25; 
     }

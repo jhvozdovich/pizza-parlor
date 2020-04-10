@@ -47,7 +47,7 @@ input:hover {
   color: white;
   background-color: #fa476e;
   border: 5px solid  rgb(65, 61, 57);
-  margin-bottom: 5%
+  margin-bottom: 5%;
 }
 
 .btn-lg:hover {
@@ -122,25 +122,32 @@ label {
     margin-right: 10%;
     margin-left: 10%
   }
+
   img {
     width: 40%;
   }
+
   .jumbotron {
     margin-top: 2%;
     margin-left: 20%;
     margin-right: 20%;
   }
+
   .order {
     padding: 2%;
   }
+
   .last-gif {
     margin-top: 2%;
     margin-bottom: 2%;
   }
+
   .btn-lg {
     margin-bottom: 1%;
   }
+
   .btn-lg:hover {
     margin-bottom: 1%;
   }
+  
 }
