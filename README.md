@@ -7,7 +7,7 @@
 
 ### Description
 
-_The purpose of this webpage is to accept user input of pizza size and toppings in order to display the final cost. It demonstrates the use of object constructors and prototypes using JavaScript and jQuery._
+_The purpose of this webpage is to accept user input of pizza size, toppings, and add-ons in order to display the final cost. It demonstrates the use of object constructors and prototypes using JavaScript and jQuery._
 
 ### Instructions for use:
 
@@ -45,9 +45,11 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **Displays cost associated with user selections** | User Input:”Medium + Pepperoni” | Output: “$10.00” |
 | **Provides option to restart order** | User Input:”Click-Restart” | Output: “Display-Welcome Page” |
 | **Provides option to alter order** | User Input:”Click-Adjust your order?” | Output: “Display-Order Page with previous selections to edit” |
-| **Delivery Option** | User Input:”Click-Delivery” | Output: “Please input your address information” |
-| **Pickup Option** | User Input:”Click-Pickup” | Output: “Please create your pizza” |
-| **Different Final Display Based on Previous Selections** | User Input:”Click-Pickup, Select-Leaning Tower of Cheeza” | Output: “'Your order will be ready for pickup in 30 minutes!' + Cheeza Gif” |
+| **Delivery option on welcome page** | User Input:”Click-Delivery” | Output: “Please input your address information” |
+| **Pickup option* on welcome page* | User Input:”Click-Pickup” | Output: “Please create your pizza” |
+| **Different final display based on previous selections** | User Input:”Click-Pickup, Select-Leaning Tower of Cheeza” | Output: “'Your order will be ready for pickup in 30 minutes!' + Cheeza Gif” |
+| **Displays error if only pineapple is selected** | User Input: "Select-Pineapple” | Output: “Error-That's gross.” |
+
 
 #### License
 

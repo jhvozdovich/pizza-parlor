@@ -155,13 +155,12 @@ $(document).ready(function() {
     })
 
     var pizzaPrice = pizza.totalPrice();
-
+    
     if (pizza.toppings.length === 1 && pizza.toppings.includes("pineapple")) {
       $("#pizza-error").modal({
         modal: true,
         autoOpen: false,
       })
-      $("#order-screen").fadeOut();
       $("#close").click(function() {
         $("#pizza-error").modal("hide");
       })
@@ -170,3 +169,4 @@ $(document).ready(function() {
     }
   })
 })
+
