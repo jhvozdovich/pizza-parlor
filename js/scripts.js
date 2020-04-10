@@ -78,11 +78,11 @@ function displayOrder(size, toppings, addOns, price) {
 
   if (addOns.length > 2) {
     var lastAddOn = addOns.pop();
-    $(".addOns").html("as well as " + addOns.join(", ") + ", and " + lastAddOn);
+    $(".addOns").html("with sides of " + addOns.join(", ") + ", and " + lastAddOn);
   } else if (addOns.length === 2) {
-    $(".addOns").html("as well as " + addOns[0] + " and " + addOns[1]);
+    $(".addOns").html("with sides of " + addOns[0] + " and " + addOns[1]);
   } else if (addOns.length === 1) {
-    $(".addOns").html("as well as " + addOns);
+    $(".addOns").html("with a side of " + addOns);
   }
   $("#order-screen").hide();
   $("#final-screen").show();
@@ -115,6 +115,8 @@ $(document).ready(function() {
       $(".vegetarian.options").slideToggle();
     } else if (this.id === "vegan-options") {
       $(".vegan.options").slideToggle();
+    } else if (this.id === "goofy-options") {
+      $(".goofy.options").slideToggle();
     }
   })
 

@@ -12,6 +12,10 @@ img {
   border: 5px solid  rgb(65, 61, 57);
 }
 
+.last-gif {
+  margin: 5%;
+}
+
 hr {
   height: 3px;
   background-color: rgb(65, 61, 57);
@@ -59,15 +63,26 @@ hr {
   color:  rgb(65, 61, 57);
   border: 2px solid  rgb(65, 61, 57);
   background-color: rgb(253, 238, 173);
+  margin-bottom: 1%;
+}
+
+label {
+  font-size: 1.5em;
 }
 
 .select {
-  padding: 1%
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
-
 
 #order-screen, #final-screen {
   display: none;
+}
+
+.order {
+  padding: 5%;
 }
 
 .price {
@@ -92,5 +107,12 @@ hr {
     margin-top: 2%;
     margin-left: 20%;
     margin-right: 20%;
+  }
+  .order {
+    padding: 2%;
+  }
+  .last-gif {
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 }
