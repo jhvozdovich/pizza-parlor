@@ -26,22 +26,24 @@ Pizza.prototype.sizePrice = function() {
 Pizza.prototype.totalToppingPrice = function() {
   toppingPrice = 0.00;
   this.toppings.forEach(function(topping) {
-    if (topping === "pepperonis" || topping === "mushrooms" || topping === "extra cheese" || topping === "nutritional yeast") {
+    if (topping === "pepperonis" || topping === "mushrooms" || topping === "extra cheese" || topping === "nutritional yeast" || topping === "macaroni and cheese") {
       toppingPrice += 2;
-    } else if (topping === "beef" || topping === "feta" || topping === "vegan cheese") {
+    } else if (topping === "beef" || topping === "feta" || topping === "vegan cheese" || topping === "cheddar whiz") {
       toppingPrice += 3
     } else {
-      toppingPrice += 1; 
+      toppingPrice += 1.25; 
     }
   })
   return toppingPrice;
 }
 
 Pizza.prototype.totalAddOnPrice = function() {
-  addOnPrice = 0.00;
+  addOnPrice = 0;
   this.addOns.forEach(function(addOn) {
     if (addOn === "cheesy bread" || addOn === "garlic rolls") {
       addOnPrice += 5;
+    } else if (addOn === "our speciality, the leaning tower of cheeza,") {
+      addOnPrice += 10;
     } else {
       addOnPrice += 2; 
     }
@@ -55,9 +57,7 @@ Pizza.prototype.totalPrice = function() {
   var totalAddOns = this.totalAddOnPrice();
   var sizePrice = this.sizePrice();
 
-  totalPrice += sizePrice;
-  totalPrice += totalToppings;
-  totalPrice += totalAddOns;
+  totalPrice = sizePrice + totalToppings + totalAddOns;
   return totalPrice;
 }
 
@@ -169,4 +169,3 @@ $(document).ready(function() {
     }
   })
 })
-
