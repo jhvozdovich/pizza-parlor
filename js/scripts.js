@@ -79,13 +79,22 @@ function displayOrder(size, toppings, addOns, price) {
   if (addOns.length > 2) {
     var lastAddOn = addOns.pop();
     $(".addOns").html("with sides of " + addOns.join(", ") + ", and " + lastAddOn);
+    addOns.push(lastAddOn);
   } else if (addOns.length === 2) {
     $(".addOns").html("with sides of " + addOns[0] + " and " + addOns[1]);
   } else if (addOns.length === 1) {
     $(".addOns").html("with a side of " + addOns);
   }
+
   $("#order-screen").hide();
   $("#final-screen").show();
+  $("#pizza-gif").show();
+  $("#cheeza-gif").hide();
+
+  if (addOns.includes("our speciality, the leaning tower of cheeza,")) {
+    $("#pizza-gif").hide();
+    $("#cheeza-gif").show();
+  }
 }
 
 $(document).ready(function() {
