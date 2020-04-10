@@ -91,11 +91,11 @@ function displayOrder(size, toppings, addOns, price) {
 $(document).ready(function() {
   $(".select.topping").click(function() {
     if (this.id === "meat-options"){
-      $(".meat.toppings").slideToggle();
+      $(".meat.options").slideToggle();
     } else if (this.id === "vegetarian-options") {
-      $(".vegetarian.toppings").slideToggle();
+      $(".vegetarian.options").slideToggle();
     } else if (this.id === "vegan-options") {
-      $(".vegan.toppings").slideToggle();
+      $(".vegan.options").slideToggle();
     }
   })
 
