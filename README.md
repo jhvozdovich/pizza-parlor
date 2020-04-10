@@ -41,8 +41,8 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | :------------- | :------------- | :------------- |
 | **Accepts and returns user input of pizza size** | User Input:”Medium” | Output: “Medium” |
 | **Accepts and returns user input of a topping** | User Input:”Pepperoni” | Output: “Pepperoni” |
-| **Accepts and returns user input of multiple toppings** | User Input:”Pepperoni, Extra Cheese, Mushrooms” | Output: “Pepperoni, Extra Cheese, Mushrooms” |
-| **Displays cost associated with user selections** | User Input:”Medium + Pepperoni” | Output: “$12.50” |
+| **Accepts and returns user input of multiple toppings** | User Input:”Pepperoni, Extra Cheese, Mushrooms” | Output: “Pepperoni, Extra Cheese, and Mushrooms” |
+| **Displays cost associated with user selections** | User Input:”Medium + Pepperoni” | Output: “$10.00” |
 
 Stretch goals: order multiple different pizzas, add-ons like drinks/breadsticks/cheesy crust, have a different display after checkout with  the option to doodle on the box and display different images, accept address information for a delivery form.
 

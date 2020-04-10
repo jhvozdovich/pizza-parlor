@@ -2,10 +2,15 @@
 function Pizza(size) {
   this.size = size,
   this.toppings = []
+  this.addOns = []
 }
 
 Pizza.prototype.addToppings = function(topping) {
   this.toppings.push(topping);
+}
+
+Pizza.prototype.addAddOns = function(addOn) {
+  this.addOns.push(addOn);
 }
 
 Pizza.prototype.sizePrice = function() {
@@ -30,21 +35,36 @@ Pizza.prototype.totalToppingPrice = function() {
   return toppingPrice;
 }
 
+Pizza.prototype.totalAddOnPrice = function() {
+  addOnPrice = 0.00;
+  this.addOns.forEach(function(addOn) {
+    if (addOn === "cheesy bread" || addOn === "garlic rolls") {
+      addOnPrice += 1;
+    } else {
+      addOnPrice += 2; 
+    }
+  })
+  return addOnPrice;
+}
+
 Pizza.prototype.totalPrice = function() {
   var totalPrice = 0;
   var totalToppings = this.totalToppingPrice();
-
+  var totalAddOns = this.totalAddOnPrice();
   var sizePrice = this.sizePrice();
+
   totalPrice += sizePrice;
   totalPrice += totalToppings;
+  totalPrice += totalAddOns;
   return totalPrice;
 }
 
 
 // User Interface Logic -------------------------------------
-function displayOrder(size, toppings, price) {
+function displayOrder(size, toppings, addOns, price) {
   $(".size").html(size);
   $(".price").html("$" + price.toFixed(2));
+
   if (toppings.length > 2) {
     var lastTopping = toppings.pop();
     $(".toppings").html("with " + toppings.join(", ") + ", and " + lastTopping);
@@ -53,6 +73,16 @@ function displayOrder(size, toppings, price) {
   } else if (toppings.length === 1) {
     $(".toppings").html("with " + toppings);
   }
+
+  if (addOns.length > 2) {
+    var lastAddOn = addOns.pop();
+    $(".addOns").html(addOns.join(", ") + ", and " + lastAddOn);
+  } else if (addOns.length === 2) {
+    $(".addOns").html(addOns[0] + " and " + addOns[1]);
+  } else if (addOns.length === 1) {
+    $(".addOns").html(addOns);
+  }
+
   $(".order").show();
 }
 
@@ -68,8 +98,13 @@ $(document).ready(function() {
       pizza.addToppings(topping);
     })
 
+    $("input:checkbox[name=addOns]:checked").each(function() {
+      var addOn = $(this).val();
+      pizza.addAddOns(addOn);
+    })
+
     var pizzaPrice = pizza.totalPrice();
 
-    displayOrder(size, pizza.toppings, pizzaPrice);
+    displayOrder(size, pizza.toppings, pizza.addOns, pizzaPrice);
   })
 })
